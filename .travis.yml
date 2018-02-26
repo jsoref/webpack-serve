@@ -18,7 +18,9 @@ before_script:
   - npm --version
 
 script:
-  npm run ci
+  - npm run ci                  # run linting and testing, generate coverage
+  - npm install webpack@^3.0.0  # install webpack@3
+  - npm run mocha               # run mocha tests against webpack@3, without coverage
 
 after_success:
   npm run cover
