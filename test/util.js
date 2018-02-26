@@ -47,7 +47,7 @@ module.exports = {
     });
   },
 
-  t: (...args) => it(...args).timeout(60e3),
+  t: (...args) => it(...args).timeout(10e3),
 
   timeout
 };
