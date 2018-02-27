@@ -12,8 +12,11 @@ jobs:
           name: npm install
           command: npm install
       - run:
-          name: sudo apt install xsel
-          command: sudo apt install xsel
+          name: install clipboard support
+          command: |
+            sudo apt install xsel
+            export DISPLAY=:99.0
+            sh -e /etc/init.d/xvfb start
       - save_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
           paths:
