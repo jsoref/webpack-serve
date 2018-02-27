@@ -16,7 +16,7 @@ jobs:
           command: |
             sudo apt install xsel
             export DISPLAY=:99.0
-            sh -e /etc/init.d/xvfb start
+            sudo sh -e /etc/init.d/xvfb start
       - save_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
           paths:
