@@ -19,7 +19,7 @@ jobs:
       - run:
           name: modify display support
           command:
-            export DISPLAY=:99.0 && ls /etc/init.d
+            export DISPLAY=:99.0 && ls /usr/bin
       - save_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
           paths:
