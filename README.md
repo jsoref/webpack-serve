@@ -311,8 +311,8 @@ We welcome your contributions! Please have a read of
 [deps]: https://david-dm.org/webpack-contrib/webpack-serve.svg
 [deps-url]: https://david-dm.org/webpack-contrib/webpack-serve
 
-[tests]: http://img.shields.io/travis/webpack-contrib/webpack-serve.svg
-[tests-url]: https://travis-ci.org/webpack-contrib/webpack-serve
+[tests]: 	https://img.shields.io/circleci/project/github/webpack-contrib/webpack-serve.svg
+[tests-url]: https://circleci.com/gh/webpack-contrib/webpack-serve/tree/master
 
 [cover]: https://codecov.io/gh/webpack-contrib/webpack-serve/branch/master/graph/badge.svg
 [cover-url]: https://codecov.io/gh/webpack-contrib/webpack-serve
