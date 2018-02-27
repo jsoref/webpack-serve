@@ -13,8 +13,9 @@ jobs:
           command: npm install
       - run:
           name: install clipboard support
-          command:
+          command: |
             sudo apt install xsel
+            sudo apt install xvfb
       - run:
           name: modify display support
           command:
