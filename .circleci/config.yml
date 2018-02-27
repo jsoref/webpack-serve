@@ -3,7 +3,7 @@ jobs:
   test:
     working_directory: ~/project
     docker:
-      - image: circleci/node:9-stretch
+      - image: circleci/node:9-browsers
     steps:
       - checkout
       - restore_cache:
@@ -13,13 +13,8 @@ jobs:
           command: npm install
       - run:
           name: install clipboard support
-          command: |
-            sudo apt install xsel
-            sudo apt install xvfb
-      - run:
-          name: modify display support
           command:
-            export DISPLAY=:99.0 && ls /usr/bin
+            sudo apt install xsel
       - save_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
           paths:
