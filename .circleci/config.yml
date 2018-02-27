@@ -20,13 +20,16 @@ jobs:
           paths:
             - node_modules
       - run:
-          name: ls
-          command: ls -asln && ls node_modules -asln
-      - run:
-          name: CI Tests
+          name: npm run ci
           command: npm run ci
       - run:
-          name: Generate code coverage
+          name: npm install webpack@^3.0.0
+          command: npm install webpack@^3.0.0
+      - run:
+          name: npm run mocha
+          command: npm run mocha
+      - run:
+          name: npm run cover
           command: npm run cover
 
 workflows:
